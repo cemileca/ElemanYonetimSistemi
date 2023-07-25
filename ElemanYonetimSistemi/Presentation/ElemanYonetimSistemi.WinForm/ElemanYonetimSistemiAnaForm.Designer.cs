@@ -68,12 +68,14 @@
             // 
             // button3
             // 
+            button3.BackColor = Color.FromArgb(255, 192, 128);
+            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Location = new Point(450, 40);
             button3.Name = "button3";
             button3.Size = new Size(206, 175);
             button3.TabIndex = 0;
-            button3.Text = "Elemanlar";
-            button3.UseVisualStyleBackColor = true;
+            button3.Text = "Yüztanıma";
+            button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
