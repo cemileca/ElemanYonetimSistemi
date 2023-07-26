@@ -9,6 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Core\ElemanYonetimSistemi.Business\ElemanYonetimSistemi.Business.csproj" />
     <ProjectReference Include="..\..\Infrastructure\ElemanYonetimSistemi.Infrastructure\ElemanYonetimSistemi.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\ElemanYonetimSistemi.Persistence\ElemanYonetimSistemi.Persistence.csproj" />

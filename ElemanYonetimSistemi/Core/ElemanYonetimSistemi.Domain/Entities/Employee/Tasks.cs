@@ -2,7 +2,7 @@
 
 namespace ElemanYonetimSistemi.Domain.Entities.Employee
 {
-    public class Task : BaseEntity
+    public class Tasks : BaseEntity
     {
         public string TaskName { get; set; }
         public string TaskDescription { get; set; }

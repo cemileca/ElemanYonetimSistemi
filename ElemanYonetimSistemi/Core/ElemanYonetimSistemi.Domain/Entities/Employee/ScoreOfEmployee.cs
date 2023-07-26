@@ -13,7 +13,7 @@ namespace ElemanYonetimSistemi.Domain.Entities.Employee
         public ICollection<Job>? FromJob { get; set; } 
 
         // Hangi verilern geçici görevden puan aldıysa onu belirtmek için. 
-        public ICollection<Task>? FomTask { get; set; } 
+        public ICollection<Tasks>? FomTask { get; set; } 
         public ICollection<Employee> Employees { get; set; } // Hangi Eleman bu puanı aldı
 
     }

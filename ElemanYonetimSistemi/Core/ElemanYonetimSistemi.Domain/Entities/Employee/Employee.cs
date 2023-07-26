@@ -11,7 +11,7 @@ namespace ElemanYonetimSistemi.Domain.Entities.Employee
         public ICollection<Job> Jobs { get; set; }
 
         // İlave verilen Görevler. Sorumluluklar. Bu sebepden Puanlama yapılacak
-        public ICollection<Task> EmployeesTasks { get; set; }
+        public ICollection<Tasks> EmployeesTasks { get; set; }
 
         // Elemanın Mola hakkları mesela: Öğlen Yemeği, Yıllık İzni, İş Çıkışı , Beş  saati vsvsvs
         public ICollection<BreakTime> BreakTimes { get; set; } 
