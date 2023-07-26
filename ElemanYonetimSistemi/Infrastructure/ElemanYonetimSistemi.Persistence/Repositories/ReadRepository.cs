@@ -1,5 +1,6 @@
 ﻿using ElemanYonetimSistemi.Business.Interfaces;
 using ElemanYonetimSistemi.Domain.Entities.Common;
+using ElemanYonetimSistemi.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -7,26 +8,52 @@ namespace ElemanYonetimSistemi.Persistence.Repositories
 {
     public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity
     {
-        public DbSet<T> Table => throw new NotImplementedException();
+        private readonly ElemanYonetimSistemiDbContext _context;
 
-        public IQueryable<T> GetAll()
+        public ReadRepository(ElemanYonetimSistemiDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<T> GetByIdAsync(string id)
+
+
+        public DbSet<T> Table => _context.Set<T>();
+
+        public IQueryable<T> GetAll(bool tracking = true)
         {
-            throw new NotImplementedException();
+            var query = Table.AsQueryable();
+            if (!tracking)
+            {
+                query = query.AsNoTracking();
+            }
+            return query;
         }
 
-        public Task<T> GetSingleAsync(Expression<Func<T, bool>> model)
+        public IQueryable<T> GetWhere(Expression<Func<T, bool>> model, bool tracking = true)
         {
-            throw new NotImplementedException();
+            var query = Table.Where(model);
+            if (!tracking)
+                query = query.AsNoTracking();
+            return query;
         }
 
-        public IQueryable<T> GetWhere(Expression<Func<T, bool>> model)
+        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> model, bool tracking = true)
         {
-            throw new NotImplementedException();
+            var query = Table.AsQueryable();
+            if (!tracking)
+                query = query.AsNoTracking();
+            return await query.FirstOrDefaultAsync(model);
         }
+        public async Task<T> GetByIdAsync(string id, bool tracking = true)
+        {
+            var query = Table.AsQueryable();
+            if (tracking)
+                query = query.AsNoTracking();
+            return await query.FirstOrDefaultAsync(data => data.ID == Int32.Parse(id));
+        }
+
+
+
+
     }
 }
