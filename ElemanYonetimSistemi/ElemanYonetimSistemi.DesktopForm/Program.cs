@@ -1,4 +1,5 @@
 using ElemanYonetimSistemi.Persistence;
+using ElemanYonetimSistemi.Persistence.Repositories;
 using ElemanYonetimSistemi.WinForm;
 using Microsoft.Extensions.Hosting;
 

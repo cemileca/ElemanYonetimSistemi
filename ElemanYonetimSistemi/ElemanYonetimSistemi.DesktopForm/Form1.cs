@@ -1,6 +1,7 @@
 using ElemanYonetimSistemi.Business.Interfaces;
 using ElemanYonetimSistemi.Domain.Entities;
 using ElemanYonetimSistemi.Domain.Entities.Common;
+using ElemanYonetimSistemi.Persistence.Contexts;
 using ElemanYonetimSistemi.Persistence.Repositories;
 
 namespace ElemanYonetimSistemi.DesktopForm
@@ -12,9 +13,15 @@ namespace ElemanYonetimSistemi.DesktopForm
             InitializeComponent();
         }
 
-      private  readonly CategoryWriteRepository _categoryWriteRepository;
+        readonly ElemanYonetimSistemiDbContext _elemanYonetimSistemiDbContext;
+        readonly CategoryReadRepository _categoryReadRepository;
 
-       
+        public Form1(ElemanYonetimSistemiDbContext elemanYonetimSistemiDbContext, CategoryReadRepository categoryReadRepository)
+        {
+            _elemanYonetimSistemiDbContext = elemanYonetimSistemiDbContext;
+            _categoryReadRepository = categoryReadRepository;
+        }
+
         private async void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -26,13 +33,6 @@ namespace ElemanYonetimSistemi.DesktopForm
 
         public async Task Ekle()
         {
-            Category category = new Category();
-            category.CategoryName = "jhfkhfkjrhg";
-            category.CategoryDescription = "jhdkjfhdhfgdkf";
-            await _categoryWriteRepository.AddAsync(category);
-            await _categoryWriteRepository.SaveAsync();
-           
-            MessageBox.Show("Test");
         }
 
     }

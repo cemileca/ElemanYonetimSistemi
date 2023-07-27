@@ -7,6 +7,10 @@ namespace ElemanYonetimSistemi.Persistence.Contexts
 {
     public class ElemanYonetimSistemiDbContext : DbContext
     {
+        public ElemanYonetimSistemiDbContext()
+        {
+        }
+
         public ElemanYonetimSistemiDbContext(DbContextOptions options) : base(options)
         {
         }

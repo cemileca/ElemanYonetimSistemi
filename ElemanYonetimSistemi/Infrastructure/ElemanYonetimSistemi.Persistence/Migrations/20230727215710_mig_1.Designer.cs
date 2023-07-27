@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ElemanYonetimSistemi.Persistence.Migrations
 {
     [DbContext(typeof(ElemanYonetimSistemiDbContext))]
-    [Migration("20230727180834_mig_1")]
+    [Migration("20230727215710_mig_1")]
     partial class mig_1
     {
         /// <inheritdoc />
@@ -191,6 +191,35 @@ namespace ElemanYonetimSistemi.Persistence.Migrations
                     b.HasIndex("PersonalID");
 
                     b.ToTable("FullAdress");
+                });
+
+            modelBuilder.Entity("ElemanYonetimSistemi.Domain.Entities.Category", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("CategoryDescription")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("DeletedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ElemanYonetimSistemi.Domain.Entities.Common.Personal", b =>
