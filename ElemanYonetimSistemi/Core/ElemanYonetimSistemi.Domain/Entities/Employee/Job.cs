@@ -1,6 +1,5 @@
 ﻿using ElemanYonetimSistemi.Domain.Entities.Common;
 using ElemanYonetimSistemi.Domain.Entities.Employee;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ElemanYonetimSistemi.Domain.Entities
 {

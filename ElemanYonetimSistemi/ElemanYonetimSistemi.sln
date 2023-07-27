@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElemanYonetimSistemi.Persis
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D4EF47DA-4D28-449C-8CB2-01C9B7BA7B65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElemanYonetimSistemi.WinForm", "Presentation\ElemanYonetimSistemi.WinForm\ElemanYonetimSistemi.WinForm.csproj", "{BF578ECB-F736-4485-A07F-079B355F949D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElemanYonetimSistemi.DesktopForm", "ElemanYonetimSistemi.DesktopForm\ElemanYonetimSistemi.DesktopForm.csproj", "{46A8F70A-F748-4113-8E94-5935441C37B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{4328B3B2-E1A6-4C30-9530-FD468E6A3C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4328B3B2-E1A6-4C30-9530-FD468E6A3C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4328B3B2-E1A6-4C30-9530-FD468E6A3C24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF578ECB-F736-4485-A07F-079B355F949D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF578ECB-F736-4485-A07F-079B355F949D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF578ECB-F736-4485-A07F-079B355F949D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF578ECB-F736-4485-A07F-079B355F949D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A8F70A-F748-4113-8E94-5935441C37B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A8F70A-F748-4113-8E94-5935441C37B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A8F70A-F748-4113-8E94-5935441C37B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A8F70A-F748-4113-8E94-5935441C37B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,7 +54,7 @@ Global
 		{817DD47E-C99F-4B12-8442-8149C8225BA3} = {0AB30404-B26C-4146-A2FE-3587DF2ECA5C}
 		{EBC8605E-769B-49B7-AD68-185CD198EA02} = {3E49E044-A01E-4510-B8B1-8868DF3DB64B}
 		{4328B3B2-E1A6-4C30-9530-FD468E6A3C24} = {3E49E044-A01E-4510-B8B1-8868DF3DB64B}
-		{BF578ECB-F736-4485-A07F-079B355F949D} = {D4EF47DA-4D28-449C-8CB2-01C9B7BA7B65}
+		{46A8F70A-F748-4113-8E94-5935441C37B1} = {D4EF47DA-4D28-449C-8CB2-01C9B7BA7B65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C094EF8-144A-4B9E-9052-D8B2400DD400}

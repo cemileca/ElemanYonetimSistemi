@@ -2,7 +2,7 @@
 
 namespace ElemanYonetimSistemi.Domain.Entities.Adresses
 {
-    public class City:BaseEntity
+    public class City : BaseEntity
     {
         public string CityName { get; set; }
         public Country Country { get; set; }

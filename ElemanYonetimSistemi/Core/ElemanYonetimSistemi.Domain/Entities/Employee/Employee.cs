@@ -2,7 +2,7 @@
 
 namespace ElemanYonetimSistemi.Domain.Entities.Employee
 {
-    public class Employee:BaseEntity
+    public class Employee : BaseEntity
     {
         public Personal Personal { get; set; } // Elemanın kişisel Verileri Adı soyadı Doğum Tarihi Adresi felan
         public decimal ScoreOfEmployee { get; set; } // Elemanın iş gücü puanlaması, yani kalitesi
@@ -14,7 +14,7 @@ namespace ElemanYonetimSistemi.Domain.Entities.Employee
         public ICollection<Tasks> EmployeesTasks { get; set; }
 
         // Elemanın Mola hakkları mesela: Öğlen Yemeği, Yıllık İzni, İş Çıkışı , Beş  saati vsvsvs
-        public ICollection<BreakTime> BreakTimes { get; set; } 
+        public ICollection<BreakTime> BreakTimes { get; set; }
         public DateTime StartOfWork { get; set; } //İşe Başlama Tarihi
         public DateTime EndOfWork { get; set; } // İşten Çıkma Tarihi
 

@@ -9,11 +9,11 @@ namespace ElemanYonetimSistemi.Persistence
             get
             {
                 ConfigurationManager configurationManager = new();
-                configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "")); 
+                configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), ""));
                 configurationManager.AddJsonFile("appsettings.json");
                 return configurationManager.GetConnectionString("PostgreSQL");
             }
-           
+
         }
     }
 }

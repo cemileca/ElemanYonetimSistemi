@@ -2,7 +2,7 @@
 
 namespace ElemanYonetimSistemi.Domain.Entities.Employee
 {
-    public class BreakTime:BaseEntity
+    public class BreakTime : BaseEntity
     {
         public string BreakName { get; set; } // Mola vaktinin adı Mesela: Öğlen Yemeği, 5 Saati vsvs
         public DateTime StartTime { get; set; }

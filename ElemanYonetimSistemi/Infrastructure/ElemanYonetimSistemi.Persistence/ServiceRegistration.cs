@@ -10,11 +10,14 @@ namespace ElemanYonetimSistemi.Persistence
     {
         public static void AddPersistenceServices(this IServiceCollection services)
         {
-            services.AddDbContext<ElemanYonetimSistemiDbContext>(option=>option.UseNpgsql(Configurations.ConnectionString));
-            services.AddScoped<IPersonalReadRepository,PersonalReadRepository> ();
-            services.AddScoped<IPersonalWriteRepository,PersonalWriteRepository> ();
-            services.AddScoped<IEmployeeReadRepository,EmployeeReadRepository> ();
-            services.AddScoped<IEmployeeWriteRepository,EmployeeWriteRepository> ();
+            services.AddDbContext<ElemanYonetimSistemiDbContext>(option => option.UseNpgsql(Configurations.ConnectionString));
+            services.AddScoped<IPersonalReadRepository, PersonalReadRepository>();
+            services.AddScoped<IPersonalWriteRepository, PersonalWriteRepository>();
+            services.AddScoped<IEmployeeReadRepository, EmployeeReadRepository>();
+            services.AddScoped<IEmployeeWriteRepository, EmployeeWriteRepository>();
+            services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
+            services.AddScoped<ICategoriWriteRepository,CategoryWriteRepository> ();
+
         }
     }
 }

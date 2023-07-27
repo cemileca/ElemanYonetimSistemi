@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\ElemanYonetimSistemi.Business\ElemanYonetimSistemi.Business.csproj" />
+    <ProjectReference Include="..\Infrastructure\ElemanYonetimSistemi.Infrastructure\ElemanYonetimSistemi.Infrastructure.csproj" />
+    <ProjectReference Include="..\Infrastructure\ElemanYonetimSistemi.Persistence\ElemanYonetimSistemi.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ElemanYonetimSistemiAnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\CayIstiyorumFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ToDoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

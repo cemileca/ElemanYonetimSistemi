@@ -4,7 +4,7 @@ using ElemanYonetimSistemi.Persistence.Contexts;
 
 namespace ElemanYonetimSistemi.Persistence.Repositories
 {
-    internal class PersonalWriteRepository : WriteRepository<Personal>, IPersonalWriteRepository
+    public class PersonalWriteRepository : WriteRepository<Personal>, IPersonalWriteRepository
     {
         public PersonalWriteRepository(ElemanYonetimSistemiDbContext context) : base(context)
         {
